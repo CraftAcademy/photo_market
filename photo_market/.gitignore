@@ -16,5 +16,11 @@
 # Ignore Byebug command history file.
 .byebug_history
 
-/vendor
+# Ruby Mine files
 .idea
+.idea/workspace.xml
+.idea/tasks.xml
+.idea/dictionaries
+.idea/vcs.xml
+.idea/jsLibraryMappings.xml
+/vendor
