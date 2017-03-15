@@ -12,3 +12,9 @@ end
 Cucumber::Rails::Database.javascript_strategy = :truncation
 
 include FactoryGirl::Syntax::Methods
+
+
+# Stub saving of files to S3
+Before do
+  Aws.config[:s3] = {stub_responses: true}
+end
