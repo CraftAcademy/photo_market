@@ -3,9 +3,9 @@ Feature: As a visitor
   I would like to add images to my shopping cart.
 
   Background:
-    Given the following images exists
-      | name   | creator | price | print_size |
-      | Sunset | John    | 17    | 200x200    |
+    Given the following images exist
+      | name   | creator | price | print_size |file         |
+      | Sunset | John    | 17    | 200x200    |my_sunset.png|
 
 Scenario: I add a image to my shopping cart
   Given I am on the index page
