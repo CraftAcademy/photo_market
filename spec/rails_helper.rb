@@ -26,7 +26,6 @@ RSpec.configure do |config|
     end
   end
 
-  # Stub saving of files to S3
   config.before(:each) do
     Aws.config[:s3] = {stub_responses: true}
   end
