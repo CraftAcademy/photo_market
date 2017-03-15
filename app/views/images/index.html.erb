@@ -3,15 +3,21 @@
 <div id="images">
   <% if @images.any? %>
     <% @images.each do |image| %>
+
       <%= image.name %>
       <%= form_tag("/add_to_cart", method: "post") do %>
         <%= hidden_field_tag(:image_id, image.id) %>
         <%= hidden_field_tag(:image_price, image.price) %>
         <%= submit_tag("Add to cart") %>
       <% end %>
+
+      <div class="image-<%=image.id%>">
+        <%= image_tag image.file.url, style: 'width: 200px; height: auto' %>
+        <p><%= image.name %></p>
+      </div>
+
     <% end %>
   <% else %>
     <p>No images yet!</p>
   <% end %>
-
 </div>
