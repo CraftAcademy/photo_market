@@ -28,7 +28,6 @@ ActiveRecord::Schema.define(version: 20170314152115) do
     t.datetime "file_updated_at"
   end
 
-
   create_table "shopping_cart_items", force: :cascade do |t|
     t.integer "owner_id"
     t.string  "owner_type"
