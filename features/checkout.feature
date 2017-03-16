@@ -13,4 +13,4 @@ Scenario: I checkout and pay for my images
   And I click "Checkout"
   And I should see "Welcome to checkout"
   And I should see "Sunset"
-  Then I should see an image "Sunset"
+  
