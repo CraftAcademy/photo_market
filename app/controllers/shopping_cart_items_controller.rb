@@ -8,10 +8,6 @@ class ShoppingCartItemsController < ApplicationController
     redirect_back(fallback_location: root_path)
   end
 
-  def checkout
-    @cart = ShoppingCart.find(session[:cart_id])
-  end
-
   private
 
   def get_shopping_cart
