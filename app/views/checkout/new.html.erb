@@ -1,1 +1,4 @@
 <h2>Welcome to checkout</h2>
+<% @cart.shopping_cart_items.each do |cart| %>
+  <%= cart.item.name %>
+<% end %>
