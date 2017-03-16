@@ -4,7 +4,7 @@ Rails.application.routes.draw do
 
   root controller: :images, action: :index
 
-  resources :shopping_carts, only: [:create], as: :cart do
+  resources :shopping_carts, only: [], as: :cart do
     resources :shopping_cart_items, only: [:create], as: :items
   end
 end

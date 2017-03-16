@@ -18,6 +18,7 @@ gem 'jquery-rails'
 gem 'turbolinks', '~> 5'
 gem 'jbuilder', '~> 2.5'
 gem 'devise'
+gem 'aws-sdk'
 
 gem 'paperclip', '~> 5.0.0'
 gem 'acts_as_shopping_cart'
@@ -33,6 +34,7 @@ group :development, :test do
   gem 'database_cleaner'
   gem 'cucumber-rails', require: false
   gem 'coveralls', require: false
+  gem 'dotenv-rails'
 end
 
 group :development do
