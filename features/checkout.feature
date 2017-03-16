@@ -6,3 +6,4 @@ Scenario: I checkout and pay for my images
   Given I am on the index page
   And I click "Checkout"
   And I am on checkout page
+  And I should see "Welcome to checkout"
