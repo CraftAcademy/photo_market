@@ -1,0 +1,7 @@
+<h2>Welcome to checkout</h2>
+<% @cart.shopping_cart_items.each do |cart_item| %>
+  <div>
+    <%= image_tag cart_item.item.file.url, style: 'width: 60px; height: auto' %>
+    </div>
+  <%= cart.item.name %>
+<% end %>
