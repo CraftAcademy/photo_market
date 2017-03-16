@@ -1,3 +1,3 @@
 Given(/^I am on checkout page$/) do
-  pending # Write code here that turns the phrase above into concrete actions
+visit checkout_path
 end
