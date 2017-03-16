@@ -15,4 +15,4 @@ Feature: As a buyer
       And I click "Checkout"
       And I should see "Welcome to checkout"
       And I should see "Sunset"
-      And I should see "total amount: 37"
+      And I should see "Total amount: 37"
