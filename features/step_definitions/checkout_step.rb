@@ -1,3 +1,3 @@
 Given(/^I am on checkout page$/) do
-visit checkout_path
+visit new_checkout_path
 end
