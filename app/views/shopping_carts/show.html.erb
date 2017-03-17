@@ -1,14 +1,14 @@
 <h2>Welcome to checkout</h2>
 
 <style>
-  div {color: black;}
+  .my-special-div {color: black;}
 </style>
 
 <% @cart.shopping_cart_items.each do |cart_item| %>
-  <div><h4>
+  <div class="my-special-div"><h4>
      <%= image_tag cart_item.item.file.url, style: 'width: 60px; height: auto' %>
      <%= cart_item.item.name %>
      price  <%= cart_item.item.price %>
   </h4></div>
 <% end %>
-     <h4>Total amount: <%= @sum %></h4>
+     <h4>Total amount: <%= @cart.total %></h4>
