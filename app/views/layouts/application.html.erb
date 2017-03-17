@@ -15,15 +15,13 @@
 
   </head>
   <body>
-
-
     <!-- Start Top Bar -->
     <div class="top-bar">
       <div class="top-bar-left" >
         <ul class="menu">
           <li class="menu-text">Photo Market</li>
           <li><a href="#">Register</a></li>
-          <li><a href="#">Checkout</a></li>
+          <li><%= link_to('Checkout', cart_path(session[:cart_id]))%></li>
           <li><a> <%= shopping_cart_message %></a></li>
         </ul>
       </div>
