@@ -19,3 +19,4 @@ end
 Then(/^I should see "([^"]*)" link$/) do |link|
   expect(page).to have_link link, visible: true
 end
+
