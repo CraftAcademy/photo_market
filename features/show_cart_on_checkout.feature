@@ -9,6 +9,11 @@ Feature: Checkout and show cart
       | Sunset | John    | 17    | 200x200    | my_sunset.png |
       | Boat   | Alex    | 20    | 200x200    | my_boat.png   |
 
+    Scenario: I checkout and my cart is empty
+      Given I am on the index page
+      And I click "Checkout"
+      Then I should see "Please add a photo to your cart before checkout"
+
     Scenario: I checkout and my cart content is displayed
       Given I am on the index page
       When I click "Buy" on "Sunset"
