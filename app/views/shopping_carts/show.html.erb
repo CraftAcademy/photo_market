@@ -1,14 +1,27 @@
 <h2>Welcome to checkout</h2>
 
-<style>
-  .my-special-div {color: black;}
-</style>
-
-<% @cart.shopping_cart_items.each do |cart_item| %>
-  <div class="my-special-div"><h4>
-     <%= image_tag cart_item.item.file.url, style: 'width: 60px; height: auto' %>
-     <%= cart_item.item.name %>
-     price  <%= cart_item.item.price %>
-  </h4></div>
-<% end %>
-     <h4>Total amount: <%= @cart.total %></h4>
+ <table class='shopping-cart'>
+   <tr>
+     <th>Image</th>
+     <th>Name</th>
+     <th>Price</th>
+   </tr>
+   <% @cart.shopping_cart_items.each do |cart_item| %>
+   <tr>
+     <td class='product-image'>
+        <%= image_tag cart_item.item.file.url, style: 'width: 60px; height: auto' %>
+     </td>
+     <td class='product-name'>
+       <%= cart_item.item.name %>
+     </td>
+     <td class='product-price'>
+       <%= cart_item.item.price %>
+     </td>
+   </tr>
+   <% end %>
+   <tr>
+     <td colspan='1'></td>
+     <th align="right">Total</th>
+     <td><%= @cart.total %></td>
+   </tr>
+ </table>

@@ -1,4 +1,5 @@
-Feature: As a buyer
+Feature: Checkout and show cart
+  As a buyer
   In order to checkout
   I would like to see my cart content
 
@@ -15,4 +16,4 @@ Feature: As a buyer
       And I click "Checkout"
       And I should see "Welcome to checkout"
       And I should see "Sunset"
-      And I should see "Total amount: 37"
+      And I should see "Total 37"
