@@ -1,4 +1,4 @@
-<h2>Welcome to checkout</h2>
+<h2>Your Shopping Cart</h2>
 
  <table class='shopping-cart'>
    <tr>
@@ -6,25 +6,26 @@
      <th>Name</th>
      <th>Price</th>
    </tr>
-   <% @cart.shopping_cart_items.each do |cart_item| %>
-   <tr>
-     <td class='product-image'>
-        <%= image_tag cart_item.item.file.url, style: 'width: 60px; height: auto' %>
-     </td>
-     <td class='product-name'>
-       <%= cart_item.item.name %>
-     </td>
-     <td class='product-price'>
-       <%= cart_item.item.price %>
-     </td>
-   </tr>
+  <% @cart.shopping_cart_items.each do |cart_item| %>
+       <tr>
+         <td class='product-image'>
+            <%= image_tag cart_item.item.file.url, style: 'width: 60px; height: auto' %>
+         </td>
+         <td class='product-name'>
+           <%= cart_item.item.name %>
+         </td>
+         <td class='product-price'>
+           <%= cart_item.item.price %> USD
+         </td>
+       </tr>
+  <% end %>
+     <tr>
+       <td colspan='1'></td>
+       <th align="right">Total:</th>
+       <td><%= @cart.total %> USD</td>
+     </tr>
+   </table>
+
+  <%= form_tag(cart_complete_path(cart_id: session[:cart_id]), method: 'post') do %>
+    <%= submit_tag('Finalize order') %>
    <% end %>
-   <tr>
-     <td colspan='1'></td>
-     <th align="right">Total</th>
-     <td><%= @cart.total %></td>
-   </tr>
- </table>
- <%= form_tag(cart_complete_path(cart_id: session[:cart_id]), method: 'post') do %>
-<%= submit_tag('Finalize order') %>
-<% end %>

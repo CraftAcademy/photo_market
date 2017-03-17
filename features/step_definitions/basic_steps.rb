@@ -30,3 +30,7 @@ end
 Then(/^show me the page$/) do
   save_and_open_page
 end
+
+Then(/^I should see "([^"]*)" link$/) do |link|
+  find_link(link).visible?
+end

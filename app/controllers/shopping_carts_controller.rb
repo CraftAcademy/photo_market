@@ -2,11 +2,11 @@ class ShoppingCartsController < ApplicationController
   before_action :get_shopping_cart
 
   def checkout
-
+    @cart = ShoppingCart.find(session[:cart_id])
   end
 
   def show
-    if @cart.total === 0
+    if @cart.shopping_cart_items.empty?
       flash[:alert] = 'Please add a photo to your cart before checkout'
       redirect_back(fallback_location: root_path)
     end
