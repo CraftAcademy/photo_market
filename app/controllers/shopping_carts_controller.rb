@@ -2,7 +2,7 @@ class ShoppingCartsController < ApplicationController
   before_action :get_shopping_cart
 
   def checkout
-    @cart = ShoppingCart.find(session[:cart_id])
+  
   end
 
   def show
