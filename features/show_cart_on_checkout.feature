@@ -32,3 +32,4 @@ Feature: Show cart content and checkout
       And I should see "Sunset"
       Then I should see "Total 37"
       And I click "Finalize order"
+      And I should see "Thank you for your order"

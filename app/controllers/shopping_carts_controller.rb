@@ -1,6 +1,10 @@
 class ShoppingCartsController < ApplicationController
   before_action :get_shopping_cart
 
+  def checkout
+
+  end
+
   def show
     if @cart.total === 0
       flash[:alert] = 'Please add a photo to your cart before checkout'

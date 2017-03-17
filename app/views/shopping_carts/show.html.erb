@@ -25,4 +25,6 @@
      <td><%= @cart.total %></td>
    </tr>
  </table>
- 
+ <%= form_tag(cart_complete_path(cart_id: session[:cart_id]), method: 'post') do %>
+<%= submit_tag('Finalize order') %>
+<% end %>
