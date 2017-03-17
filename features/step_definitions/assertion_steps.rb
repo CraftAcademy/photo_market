@@ -15,3 +15,8 @@ Then(/^I should( not)? see "([^"]*)"$/) do |negate, content|
     expect(page).to have_content content
   end
 end
+
+Then(/^I should see "([^"]*)" link$/) do |link|
+  expect(page).to have_link link, visible: true
+end
+
